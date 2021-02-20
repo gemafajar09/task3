@@ -115,7 +115,7 @@ class _LoginState extends State<Login> {
         Material(
           elevation: 5.0,
           borderRadius: BorderRadius.circular(30),
-          color: Colors.lightBlue[100],
+          color: Colors.green[200],
           child: MaterialButton(
             minWidth: MediaQuery.of(context).size.width,
             padding: EdgeInsets.fromLTRB(20, 15, 20, 15),

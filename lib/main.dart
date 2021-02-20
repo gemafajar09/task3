@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     Login.router : (context) => Login(),
     Home.router : (context) => Home(),
     Fisika.router : (context) => Fisika(),
-    Konversi.router : (context) => Konversi()
+    Konversi.router : (context) => Konversi(),
   };
   @override
   Widget build(BuildContext context) {
