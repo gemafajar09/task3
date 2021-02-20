@@ -31,12 +31,12 @@ class _FisikaState extends State<Fisika> {
     lbr = double.parse(_lebar.text);
     setState(() {
       /* 
-          satuan panjang dan lebar itu adalah meter yang nantinya akan dijadikan ke meter persegi (m2) maka dikali 100
+          satuan panjang dan lebar itu adalah meter yang nantinya akan dijadikan ke meter persegi (m2)
         */
       _panjang.clear();
       _lebar.clear();
       volume = 0;
-      luas = (pjg * lbr) * 100;
+      luas = pjg * lbr;
     });
   }
 
@@ -48,13 +48,13 @@ class _FisikaState extends State<Fisika> {
     
     setState(() {
       /* 
-          satuan panjang dan lebar itu adalah meter yang nantinya akan dijadikan ke kubik (m3) maka dikali 1000
+          satuan panjang dan lebar itu adalah meter yang nantinya akan dijadikan ke kubik (m3)
         */
       _panjangVolume.clear();
       _lebarVolume.clear();
       _tinggiVolume.clear();
       luas = 0;
-      volume = (vpjg * vlbr * vtig) * 1000;
+      volume = vpjg * vlbr * vtig;
     });
   }
 

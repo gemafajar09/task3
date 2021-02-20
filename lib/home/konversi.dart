@@ -26,7 +26,7 @@ class _KonversiState extends State<Konversi> {
   ];
 
   void carihasil1(var isi) {
-    for (var i = 1; i < satuan.length; i++) {
+    for (var i = 0; i < satuan.length; i++) {
       if (satuan[i] == pilihan1) {
         pecah1 = i + 1;
       }
@@ -39,7 +39,7 @@ class _KonversiState extends State<Konversi> {
     if (pecah1 > pecah2) {
       tampung = pecah1 - pecah2;
       if (tampung == 0) {
-        hasil = int.parse(isi) / 0;
+        hasil = int.parse(isi) / 1;
       } else if (tampung == 1) {
         hasil = int.parse(isi) / 10;
       } else if (tampung == 2) {
@@ -62,7 +62,7 @@ class _KonversiState extends State<Konversi> {
     } else {
       tampung = pecah2 - pecah1;
       if (tampung == 0) {
-        hasil = int.parse(isi) * 0;
+        hasil = int.parse(isi) * 1;
       } else if (tampung == 1) {
         hasil = int.parse(isi) * 10;
       } else if (tampung == 2) {
@@ -86,7 +86,7 @@ class _KonversiState extends State<Konversi> {
   }
 
   void carihasil2(var isi) {
-    for (var i = 1; i < satuan.length; i++) {
+    for (var i = 0; i < satuan.length; i++) {
       if (satuan[i] == pilihan1) {
         pecah1 = i + 1;
       }
@@ -96,8 +96,8 @@ class _KonversiState extends State<Konversi> {
       }
     }
 
-    if (pecah1 > pecah2) {
-      tampung = pecah1 - pecah2;
+    if (pecah2 > pecah1) {
+      tampung = pecah2 - pecah1;
       if (tampung == 0) {
         hasil = int.parse(isi) / 0;
       } else if (tampung == 1) {
@@ -120,7 +120,7 @@ class _KonversiState extends State<Konversi> {
       });
       
     } else {
-      tampung = pecah2 - pecah1;
+      tampung = pecah1 - pecah2;
       if (tampung == 0) {
         hasil = int.parse(isi) * 0;
       } else if (tampung == 1) {
@@ -205,7 +205,18 @@ class _KonversiState extends State<Konversi> {
                             Container(
                               margin: EdgeInsets.only(left: 10),
                               width: MediaQuery.of(context).size.width / 2.2,
-                              child: DropdownButton(
+                              decoration: BoxDecoration(
+                                // borderRadius: BorderRadius.circular(10),
+                                color: Colors.white
+                              ),
+                              child: DropdownButtonFormField(
+                                decoration: InputDecoration(
+                                  border: OutlineInputBorder(
+                                    borderRadius: const BorderRadius.all(
+                                      const Radius.circular(5.0),
+                                    ),
+                                  ),
+                                ),
                                 hint: Text('-SELECT SATUAN-'),
                                 value: pilihan1,
                                 onChanged: (value) {
@@ -252,7 +263,14 @@ class _KonversiState extends State<Konversi> {
                             Container(
                               margin: EdgeInsets.only(left: 10),
                               width: MediaQuery.of(context).size.width / 2.2,
-                              child: DropdownButton(
+                              child: DropdownButtonFormField(
+                                decoration: InputDecoration(
+                                  border: OutlineInputBorder(
+                                    borderRadius: const BorderRadius.all(
+                                      const Radius.circular(5.0),
+                                    ),
+                                  ),
+                                ),
                                 hint: Text('-SELECT SATUAN-'),
                                 value: pilihan2,
                                 onChanged: (isi) {
