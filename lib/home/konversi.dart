@@ -222,6 +222,7 @@ class _KonversiState extends State<Konversi> {
                                 onChanged: (value) {
                                   setState(() {
                                     pilihan1 = value;
+                                    carihasil1(_panjang.text);
                                   });
                                 },
                                 items: satuan.map((item) {
@@ -276,6 +277,7 @@ class _KonversiState extends State<Konversi> {
                                 onChanged: (isi) {
                                   setState(() {
                                     pilihan2 = isi;
+                                    carihasil2(_konversi.text);
                                   });
                                 },
                                 items: satuan.map((item) {

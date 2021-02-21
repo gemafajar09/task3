@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:task3/home/home.dart';
+import 'package:task3/home/splash.dart';
 
 class Login extends StatefulWidget {
   Login({Key key}) : super(key: key);
@@ -31,7 +31,7 @@ class _LoginState extends State<Login> {
         if (_password.text == 'udacodingJaya2021') {
           _username.clear();
           _password.clear();
-          Navigator.pushReplacementNamed(context, Home.router);
+          Navigator.pushReplacementNamed(context, Splash.router);
         } else {
           _password.clear();
           showToast('Maaf Password Salah.');

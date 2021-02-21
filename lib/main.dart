@@ -3,6 +3,7 @@ import 'package:task3/auth/Login.dart';
 import 'package:task3/home/fisika.dart';
 import 'package:task3/home/home.dart';
 import 'package:task3/home/konversi.dart';
+import 'package:task3/home/splash.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
     Home.router : (context) => Home(),
     Fisika.router : (context) => Fisika(),
     Konversi.router : (context) => Konversi(),
+    Splash.router: (context) => Splash()
   };
   @override
   Widget build(BuildContext context) {
